@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/olennon/Desktop/Code/AdventofCode2025/Question1/main'
+relocations:     []
+...
