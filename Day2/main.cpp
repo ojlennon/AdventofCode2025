@@ -29,18 +29,6 @@ bool check_number_part_one(int64_t num){
     return left_half == right_half;
 }
 
-bool check_helper(const string& target, const string& str){
-  int target_len = target.length();
-  int str_len = str.length();
-  for(int i = 0; i <= str_len - target_len; i++){
-    if(str.substr(i, target_len) == target){
-      cout << "Found target: " << target << " in " << str.substr(i, target_len) << "\n";
-      return true;
-    }
-  }
-  return false;
-}
-
 bool check_number_part_two(int64_t num){
   if (num == 0) return false;
   string str_num = to_string(num);
@@ -54,8 +42,7 @@ bool check_number_part_two(int64_t num){
                 is_repeating = false;
                 break;
             }
-        }
-        
+        }        
         if(is_repeating){
             return true;
         }
