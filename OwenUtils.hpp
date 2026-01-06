@@ -25,6 +25,18 @@ std::vector<std::string> split_string(const std::string &str){
     return result;
 }
 
+std::vector<std::vector<std::string>> split_string_no_spaces(const std::vector<std::string>& input) {
+    std::vector<std::vector<std::string>> result;
+    for(const std::string& s : input) {
+        std::vector<std::string> chars;
+        for(char c : s) {
+            chars.push_back(std::string(1, c));
+        }
+        result.push_back(chars);
+    }
+    return result;
+}
+
 std::string join_no_sep(const std::vector<std::string>& v) {
     std::string out;
     for (const auto &s : v) out += s;

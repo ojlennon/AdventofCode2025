@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+g++ -I.. main.cpp -o main
+./main
